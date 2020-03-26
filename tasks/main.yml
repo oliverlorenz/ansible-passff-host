@@ -3,6 +3,7 @@
     update_cache: yes
     name:
       - curl
+  become: yes
 
 - name: install passff host
   shell: "curl -sSL https://github.com/passff/passff-host/releases/download/{{ passff_host_version }}/install_host_app.sh | bash -s -- firefox"
