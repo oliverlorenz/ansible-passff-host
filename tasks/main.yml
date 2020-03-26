@@ -1,0 +1,8 @@
+- name: ensure standard firefox is absent
+  apt:
+    update_cache: yes
+    name:
+      - curl
+
+- name: install passff host
+  shell: "curl -sSL https://github.com/passff/passff-host/releases/download/{{ passff_host_version }}/install_host_app.sh | bash -s -- firefox"
